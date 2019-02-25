@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Calculator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A simple calculator made with Javascript">
+	<meta name="author" content="Fer Ayguavives">
+	<meta name="version" content="2.0">	
+	<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+	<main>
+		<h1>Calculadora</h1>
+		<article id="calculator">
+			<div id="display"></div>
+			<ul>
+				<ul id="btn-nums">
+					<li><button class="btn btn-num">7</button></li>
+					<li><button class="btn btn-num">8</button></li>
+					<li><button class="btn btn-num">9</button></li>
+					<li><button class="btn btn-num">4</button></li>
+					<li><button class="btn btn-num">5</button></li>
+					<li><button class="btn btn-num">6</button></li>
+					<li><button class="btn btn-num">1</button></li>
+					<li><button class="btn btn-num">2</button></li>
+					<li><button class="btn btn-num">3</button></li>
+					<li id="btn-0"><button>0</button></li>
+					<li><button class="btn btn-num">.</button></li>
+				</ul>
+				<ul id="btn-operators">
+						<li><button id="btn-reset">=</button></li>
+						<li><button id="btnEqual">=</button></li>
+						<li><button class="btn btn-operation--small">√</button></li>
+						<li><button class="btn btn-operation--small">/</button></li>
+						<li><button class="btn btn-operation--small">*</button></li>
+						<li><button class="btn btn-operation--small">+</button></li>
+						<li><button class="btn btn-operation--small">-</button></li>
+				</ul>
+			</ul>
+		</article>
+	</main>
+	<script src="/key-config.js"></script>
+	<script src="/calculator2.js"></script>
+	<script src="/display.js"></script>
+	<script>
+		const display = new Display('div#display', '0');
+		setBtnListeners();
+		setKeyListeners();
+		display.reset();
+
+		function reactKey (event) {
+			// event.preventDefault();
+			const key = event.key || event.target.innerHTML;
+			if(key === '=' || key=== 'Enter' ) {
+				const operation = display.value();
+				let result = operate(operation);
+				result = getFixedNumber(result, 2);
+				display.reset().update(result);
+			}
+			else {
+				try {
+					isValidChar(key) 
+					display.update(key);
+				} catch(e) {
+					console.log(e)
+				}
+		}
+}
+	</script>
+</body>
+</html>
