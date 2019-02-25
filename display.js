@@ -4,19 +4,19 @@ const Display = function (elementRef, startValue) {
     function value () { return element.innerHTML }
 
     function update (newValue) {
-			newValue = value() === startValue ? newValue : value().concat(newValue);
-			element.innerHTML = newValue;
-			return this
+	newValue = value() === startValue ? newValue : value().concat(newValue);
+	element.innerHTML = newValue;
+	return this
     }
 
     function reset () {
-			element.innerHTML = startValue;
-			return this;
+	element.innerHTML = startValue;
+	return this;
     }
 
     return {
-			value,
-			update,
-			reset
+	value,
+	update,
+	reset
     }
 }
