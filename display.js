@@ -1,22 +1,23 @@
 const Display = function (elementRef, startValue) {
     const element = document.querySelector(elementRef);
 
-    function value () { return element.innerHTML }
+    function value () { return element.value }
 
+    //TODO: Overwrite Error message in display!
     function update (newValue) {
-	newValue = value() === startValue ? newValue : value().concat(newValue);
-	element.innerHTML = newValue;
-	return this
+        newValue = value() === startValue ? newValue : value().concat(newValue);
+        element.value = newValue;
+        return this
     }
 
     function reset () {
-	element.innerHTML = startValue;
-	return this;
+        element.value = startValue;
+        return this;
     }
 
     return {
-	value,
-	update,
-	reset
+        value,
+        update,
+        reset
     }
 }

@@ -11,62 +11,57 @@
 </head>
 <body>
 	<main>
-		<h1>Calculadora</h1>
-		<article id="calculator">
-			<div id="display"></div>
+		<header>
+			<h1>HACK - A - Calc</h1>
+		</header>
+		<form id="calculator">
+			<div id="display">
+				<output name="display" id="display-output"></output>
+			</div>
 			<ul>
+				<ul id="btn-operators">
+					<li><button value="√"  id="btn-squareroot">√</button></li>
+					<li><button class="btn btn-operation--small">/</button></li>
+					<li><button class="btn btn-operation--small">*</button></li>
+					<li><button class="btn btn-operation--small">+</button></li>
+					<li><button class="btn btn-operation--small">-</button></li>
+					<li><button id="btn-reset">AC</button></li>
+					<li><button value="=" id="btn-equal">=</button></li>
+				</ul>
 				<ul id="btn-nums">
-					<li><button class="btn btn-num">7</button></li>
-					<li><button class="btn btn-num">8</button></li>
-					<li><button class="btn btn-num">9</button></li>
-					<li><button class="btn btn-num">4</button></li>
-					<li><button class="btn btn-num">5</button></li>
-					<li><button class="btn btn-num">6</button></li>
-					<li><button class="btn btn-num">1</button></li>
-					<li><button class="btn btn-num">2</button></li>
-					<li><button class="btn btn-num">3</button></li>
-					<li id="btn-0"><button>0</button></li>
+					<li><button value="1" class="btn btn-num">1</button></li>
+					<li><button value="2" class="btn btn-num">2</button></li>
+					<li><button value="3" class="btn btn-num">3</button></li>
+					<li><button value="4" class="btn btn-num">4</button></li>
+					<li><button value="5" class="btn btn-num">5</button></li>
+					<li><button value="6" class="btn btn-num">6</button></li>
+					<li><button value="7" class="btn btn-num">7</button></li>
+					<li><button value="8" class="btn btn-num">8</button></li>
+					<li><button value="9" class="btn btn-num">9</button></li>
+					<li id="btn-0"><button value="0" class="btn btn-num"> 0</button></li>
 					<li><button class="btn btn-num">.</button></li>
 				</ul>
-				<ul id="btn-operators">
-						<li><button id="btn-reset">=</button></li>
-						<li><button id="btnEqual">=</button></li>
-						<li><button class="btn btn-operation--small">√</button></li>
-						<li><button class="btn btn-operation--small">/</button></li>
-						<li><button class="btn btn-operation--small">*</button></li>
-						<li><button class="btn btn-operation--small">+</button></li>
-						<li><button class="btn btn-operation--small">-</button></li>
-				</ul>
 			</ul>
-		</article>
+		</form>
+		<footer>
+			<p>
+					Created by Fer Ayguavives.  
+			</p>
+			<p>
+				At Hack A Bos FullStack Programmer Bootcamp.
+			</p>
+<!-- 			<nav>
+				<ul class="links">
+					<li><a href="https://github.com/FerAiwa/module0">Github</a></li>
+					<li><a href="https://https://es.linkedin.com/in/fer-ayguavives-oti-178a54139">Linkedin</a></li>
+				</ul>
+			</nav> -->
+			
+		</footer>
 	</main>
-	<script src="/key-config.js"></script>
 	<script src="/calculator2.js"></script>
 	<script src="/display.js"></script>
-	<script>
-		const display = new Display('div#display', '0');
-		setBtnListeners();
-		setKeyListeners();
-		display.reset();
-
-		function reactKey (event) {
-			// event.preventDefault();
-			const key = event.key || event.target.innerHTML;
-			if(key === '=' || key=== 'Enter' ) {
-				const operation = display.value();
-				let result = operate(operation);
-				result = getFixedNumber(result, 2);
-				display.reset().update(result);
-			}
-			else {
-				try {
-					isValidChar(key) 
-					display.update(key);
-				} catch(e) {
-					console.log(e)
-				}
-		}
-}
-	</script>
+	<script src="/key-validator.js"></script>
+	<script src="/main.js"></script>
 </body>
 </html>
