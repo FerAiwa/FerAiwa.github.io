@@ -1,6 +1,6 @@
 # FerAiwa.github.io
 
-This repository serves as host for diferent projects and ideas created during Hack A BOS Full-Stack Programmer Bootcamp.
+This repository serves as host for diferent projects and ideas created during Hack A BOS Full-Stack Programer Bootcamp.
 
 # Live Demo
 * [HackABos Challenges - Calculator](http://feraiwa.github.io)  v2
