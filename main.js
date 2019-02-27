@@ -34,7 +34,6 @@
   }
   
   function showResults (e) {
-    console.log('show results')
     e.preventDefault();
     const key = e.target.value;
     let result;
