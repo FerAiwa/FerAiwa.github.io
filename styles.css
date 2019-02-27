@@ -2,9 +2,11 @@
     font-size: 16px;
     font-family: sans-serif;
 }
+header,main,footer {
+    text-align: center;
+}
 
 main {
-    text-align: center;
     height: 350px;
     background-image: url(/media/hackapez.png);
     background-size: 10%;
