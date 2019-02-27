@@ -6,7 +6,6 @@ const Display = function (elementRef, startValue) {
     function isStartValue (value) { return value === startValue }
     function hasErrorMsg (value) { return ['Error', 'NaN', 'Infinity'].includes(value) }
 
-    //TODO: Overwrite Error message in display!
     function update (newValue) {
         let value = element.value;
         newValue = isStartValue(value) || hasErrorMsg(value) ? newValue : value.concat(newValue);
