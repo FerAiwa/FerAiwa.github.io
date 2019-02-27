@@ -3,7 +3,7 @@
 This repository serves as host for diferent projects and ideas created during Hack A BOS Full-Stack Programer Bootcamp.
 
 # Live Demo
-* [HackABos Challenges - Calculator](http://feraiwa.github.io)  v2
+* [Calculator v.2](http://feraiwa.github.io)
 
  # Changelog
   27/02/2019
