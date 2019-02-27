@@ -1,9 +1,10 @@
 # FerAiwa.github.io
 
-Hack a Bos Challenges
+This repository serves as host for diferent projects and ideas created during Hack A Bos Full-Stack Programmer Bootcamp.
+
 
 # Live Demo
-* [Live Demo](http://feraiwa.io) 
+* [Live Demo](http://feraiwa.github.io) 
 
  #Latest changes
  
