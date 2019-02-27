@@ -3,7 +3,7 @@
 Hack a Bos Challenges
 
 # Live Demo
-* [Live Demo](http://feraiwa.io) - HTML to Markdown converter
+* [Live Demo](http://feraiwa.io) 
 
  #Latest changes
  
