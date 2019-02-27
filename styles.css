@@ -2,24 +2,6 @@
     font-size: 16px;
     font-family: sans-serif;
 }
-h1 {
-    color: #3ca4c8;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-}
-
-ul {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    padding: 0;
-    list-style-type: none;
-}
-form {
-    margin: 0 50%;
-    transform: translateX(-50%);
-}
 
 main {
     text-align: center;
@@ -30,31 +12,38 @@ main {
     background-position-x: 100%;
     background-position-y: 30px;
 }
-ul.links {
-    display: inline;
+h1 {
+    color: #3ca4c8;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: -2px;
 }
-footer li:first-child::before {
-    max-width: 20px;
-    content: url(/media/_ionicons_svg_logo-github.svg)
+/* Calculator */
+form {
+    margin: 0 50%;
+    transform: translateX(-50%);
 }
-footer li:nth-child(2)::before {
-    content: url(/media/_ionicons_svg_logo-linkedin.svg)
+ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
 }
 
+li {
+    padding: 5px;
+}
 
 #calculator {
     width: 300px;
     height: 220px;
     background-color: #1a1c1b;
     border-radius: 20px;
-    border: 10px solid black;
+    border: 8px solid black;
 }
-
-#calculator div output {
-    font-size: 1.5rem;
-    vertical-align: middle;
-}
-
 #display {
     margin: 20px 50%;
     transform: translateX(-50%);
@@ -62,58 +51,30 @@ footer li:nth-child(2)::before {
     background-color: rgba(188, 218, 229, 0.801);
     text-align: right;
     letter-spacing: 2px;
-    vertical-align: middle;
     width: 70%;
     height: 40px;
 }
 
-#btn-actions {
-}
-
-#btn-actions li {
-    display: inline-block;
-}
-#btn-operators {
-    width: 100%;
-    align-content: center;
-    justify-content: center;
-}
-#btn-operators li {
-    align-self: center;
-}
-
-#btn-actions button {
-    background-color: rgb(40, 68, 39);
-}
-
-
-#btn-operators #btn-reset {
-    background-color: rgb(40, 68, 39);
+#calculator output {
+    font-size: 1.5rem;
+    vertical-align: middle;
 }
 
 button {
     border-width: 1px;
-    color: white;
     border-radius: 10px;
+    color: white;
 }
-
-#btn-nums button {
-    background-color: rgb(80, 82, 82);
-}
-
-
 
 #btn-operators button {
     background-color: #222121;
 }
 
-
-.btn-square {
+#btn-operators #btn-reset {
+    background-color: rgb(40, 68, 39);
 }
-
-
-li {
-    padding: 5px;
+#btn-nums button {
+    background-color: rgb(80, 82, 82);
 }
 #btn-0 {
     flex: 1 1 75px;
@@ -123,7 +84,15 @@ li {
     width: 100%;
 }
 
-.btn-num {
-    width: 30px;
-    height: 30px;
+
+/* Footer */
+ul.links {
+    display: inline;
+}
+footer li:first-child::before {
+    max-width: 20px;
+    content: url(/media/_ionicons_svg_logo-github.svg)
+}
+footer li:nth-child(2)::before {
+    content: url(/media/_ionicons_svg_logo-linkedin.svg)
 }

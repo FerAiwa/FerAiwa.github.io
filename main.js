@@ -5,7 +5,7 @@
   setButtons();
 
   function setButtons () {
-    const standartBtns = document.querySelectorAll('button.btn'); //Standart [0-9] [+,-,*,/]
+    const standartBtns = document.querySelectorAll(`button:not([id])`); //Standart [0-9] [+,-,*,/]
     const specialBtns = [
       { selector: '#btn-reset', 		triggers: display.reset },
       { selector: '#btn-equal', 		triggers: showResults },
@@ -24,7 +24,7 @@
 
   function printKey (event) {
     event.preventDefault();
-    const key = event.key || event.target.innerHTML;
+    const key = event.target.innerHTML;
     try {
       isValidChar(key) 
       display.update(key);
@@ -34,6 +34,7 @@
   }
   
   function showResults (e) {
+    console.log('show results')
     e.preventDefault();
     const key = e.target.value;
     let result;

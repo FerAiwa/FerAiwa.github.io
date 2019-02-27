@@ -1,8 +1,9 @@
-//Calculator v.2.0      Date: 24/02/2019
+//Calculator v.2.2      LastUpdate: 27/02/2019
 const Calculator = (function (maxDecimals) {
     let _result = 0;
     
     function operate (operation) {
+        console.log('operation', operation)
         try {
             validateInput(operation);
             _result = eval(operation);

@@ -3,9 +3,13 @@ const Display = function (elementRef, startValue) {
 
     function value () { return element.value }
 
+    function isStartValue (value) { return value === startValue }
+    function hasErrorMsg (value) { return ['Error', 'NaN', 'Infinity'].includes(value) }
+
     //TODO: Overwrite Error message in display!
     function update (newValue) {
-        newValue = value() === startValue ? newValue : value().concat(newValue);
+        let value = element.value;
+        newValue = isStartValue(value) || hasErrorMsg(value) ? newValue : value.concat(newValue);
         element.value = newValue;
         return this
     }
