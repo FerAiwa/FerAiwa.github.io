@@ -9,7 +9,7 @@ This repository serves as host for diferent projects and ideas created during Ha
  Latest: 28/02/2019
  * New feature: ← button.
  * Keydown functionality is now fully implemented.
- * Display now properly displays long string of numbers without breaking the UI.
+ * Display now properly shows long string of numbers without breaking the UI.
  * Added contact information to the HTML file.
  
   27/02/2019
