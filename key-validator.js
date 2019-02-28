@@ -1,14 +1,29 @@
-function validateInput (str) {
-    const validation = str.trim().split("")
-        .map(isValidChar)
-        .reduce(x => x === true)
-    if(!validation) throw 'Invalid input...!'
+
+// Use Notes: 
+// To add new validations, just create new functions and add the names to  
+// validConditions array.
+const validConditions = [isNotLetter, isOperator, isDot];
+
+function isStringValid (str) {
+    const validation = str.trim().split("").map(isCharValid);
     return validation
 }
 
-function isValidChar (char) {
-    const OPERATORS = ['+','-','*','/'];
-    const validation = /[0-9,.]/.test(char) || OPERATORS.includes(char); 
-    if(!validation) throw 'Invalid character. Try again.';
-    return validation
+function isCharValid (char) {
+    try {  
+        validConditions.map(check => check(char))
+    }
+    catch (e) {
+       throw 'Invalid character.' + e
+    }
+    return true
 }
+
+//Single-validators
+function isNotLetter (char) {
+    if(/[A-Z]/i.test(char)) throw 'Letter characters are not allowed'
+}
+
+function isOperator (char) { return ['+','-','*','/'].includes(char) }
+
+function isDot (char) { return /[,.]/.test(char) }

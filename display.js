@@ -6,6 +6,7 @@ const Display = function (elementRef, startValue) {
     function isStartValue (value) { return value === startValue }
     function hasErrorMsg (value) { return ['Error', 'NaN', 'Infinity'].includes(value) }
 
+    //TODO: Overwrite Error message in display!
     function update (newValue) {
         let value = element.value;
         newValue = isStartValue(value) || hasErrorMsg(value) ? newValue : value.concat(newValue);
@@ -18,9 +19,16 @@ const Display = function (elementRef, startValue) {
         return this;
     }
 
+    function deleteLastChar () {
+        const value = element.value;
+        element.value = value.substring(0, value.length-1);
+        return this
+    }
+
     return {
         value,
         update,
-        reset
+        reset,
+        deleteLastChar
     }
 }

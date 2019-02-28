@@ -4,7 +4,7 @@ const Calculator = (function (maxDecimals) {
     
     function operate (operation) {
         try {
-            validateInput(operation);
+            isStringValid(operation);
             _result = eval(operation);
         }
         catch(e) {

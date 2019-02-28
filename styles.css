@@ -39,13 +39,14 @@ li {
 }
 
 #calculator {
-    width: 300px;
+    width: 310px;
     height: 220px;
     background-color: #1a1c1b;
     border-radius: 20px;
     border: 8px solid black;
 }
 #display {
+    position: relative;
     margin: 20px 50%;
     transform: translateX(-50%);
     border: 2px solid black;
@@ -54,9 +55,12 @@ li {
     letter-spacing: 2px;
     width: 70%;
     height: 40px;
+    overflow-x: hidden;
 }
 
-#calculator output {
+#display output {
+    position: absolute;
+    right: 0%;
     font-size: 1.5rem;
     vertical-align: middle;
 }
@@ -67,33 +71,46 @@ button {
     color: white;
 }
 
-#btn-operators button {
-    background-color: #222121;
+#btn-nums ul {
+    margin: 0 50%;
+    transform: translateX(-50%);    
+    width: 80%;
 }
 
-#btn-operators #btn-reset {
-    background-color: rgb(40, 68, 39);
-}
+
 #btn-nums button {
     background-color: rgb(80, 82, 82);
 }
-#btn-0 {
-    flex: 1 1 75px;
-    margin-left: 5px;
+
+#btn-operators button {
+    background-color: #222121;
 }
-#btn-0 button {
-    width: 100%;
+button#btn-reset, button#btn-eraselast {
+    background-color: rgb(40, 68, 39);
 }
+
 
 
 /* Footer */
+footer * {
+    font-size: 0.85rem;
+}
+
 ul.links {
-    display: inline;
+    display: inline-flex;
 }
-footer li:first-child::before {
-    max-width: 20px;
-    content: url(/media/_ionicons_svg_logo-github.svg)
+
+footer li a::before {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
 }
-footer li:nth-child(2)::before {
-    content: url(/media/_ionicons_svg_logo-linkedin.svg)
+[href^="mailto"]::before {
+    content: '📧';
+}
+[href*="github"]::before {
+    content: url(/media/_ionicons_svg_logo-github.svg);
+}
+[href*="linkedin"]::before {
+    content: url(/media/_ionicons_svg_logo-linkedin.svg);
 }
