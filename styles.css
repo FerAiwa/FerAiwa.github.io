@@ -109,8 +109,8 @@ footer li a::before {
     content: '📧';
 }
 [href*="github"]::before {
-    content: url(/media/_ionicons_svg_logo-github.svg);
+    content: url('/media/_ionicons_svg_logo-github.svg');
 }
 [href*="linkedin"]::before {
-    content: url(/media/_ionicons_svg_logo-linkedin.svg);
+    content: url('/media/_ionicons_svg_logo-linkedin.svg');
 }
