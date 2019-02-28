@@ -9,7 +9,8 @@ This repository serves as host for diferent projects and ideas created during Ha
  Latest: 28/02/2019
  * New feature: ← button.
  * Keydown functionality is now fully implemented.
- * Add contact information to the HTML file.
+ * Display now properly displays long string of numbers without breaking the UI.
+ * Added contact information to the HTML file.
  
   27/02/2019
  * Released a second version of the calculator with a more interactive UI.
