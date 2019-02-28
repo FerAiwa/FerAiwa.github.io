@@ -3,7 +3,6 @@ const Calculator = (function (maxDecimals) {
     let _result = 0;
     
     function operate (operation) {
-        console.log('operation', operation)
         try {
             validateInput(operation);
             _result = eval(operation);
