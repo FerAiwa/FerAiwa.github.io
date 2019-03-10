@@ -15,8 +15,7 @@ This repository serves as host for diferent projects and ideas created during Ha
  * Released first version of the taxi-service challenge. 
 `Repo` (https://github.com/FerAiwa/taxi-service)
  
- ### Week 2
- 28/02/2019
+ ### 28/02/2019 (Week 2)
  #### Calculator
  * New feature: ← button.
  * Keydown functionality is now fully implemented.
