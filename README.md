@@ -5,7 +5,7 @@ This repository serves as host for diferent projects and ideas created during Ha
 ## Live Demos
 * [Calculator v.2.1](http://feraiwa.github.io)
 * [Taxi-Service v.1.0](http://feraiwa.github.io/taxi-service)
-* [Spaceship Battle](https://feraiwa.github.io/spaceBattle) (*private repo. Public in a few weeks*)
+* [Spaceship Battle](https://feraiwa.github.io/spaceBattle)
 
 ## Changelog
 ### Latest: 03/04/2019 (Week 7)
